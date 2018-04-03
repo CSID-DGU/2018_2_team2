@@ -79,7 +79,7 @@ BOOL CChildView::PreCreateWindow(CREATESTRUCT& cs)
 }
 
 const int ROOM_CELL_WIDTH = 85;
-const int ROOM_CELL_HEIGHT = 50;
+const int ROOM_CELL_HEIGHT = 30;
 
 const int ROOM_MARGIN_WIDTH = 50;
 const int ROOM_MARGIN_HEIGHT = 50;
@@ -113,7 +113,7 @@ void CChildView::OnPaint()
 	dc.SetBkMode(TRANSPARENT);
 
 	CFont tableHeadersFont;
-	tableHeadersFont.CreateFont(24, 0, 0, 0, 700, FALSE, FALSE, FALSE, DEFAULT_CHARSET,
+	tableHeadersFont.CreateFont(20, 0, 0, 0, 700, FALSE, FALSE, FALSE, DEFAULT_CHARSET,
 		OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, DEFAULT_PITCH | FF_DONTCARE,
 		_T("Arial"));
 
