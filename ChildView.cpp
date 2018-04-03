@@ -113,7 +113,7 @@ void CChildView::OnPaint()
 	dc.SetBkMode(TRANSPARENT);
 
 	CFont tableHeadersFont;
-	tableHeadersFont.CreateFont(20, 0, 0, 0, 700, FALSE, FALSE, FALSE, DEFAULT_CHARSET,
+	tableHeadersFont.CreateFont(16, 0, 0, 0, 500, FALSE, FALSE, FALSE, DEFAULT_CHARSET,
 		OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, DEFAULT_PITCH | FF_DONTCARE,
 		_T("Arial"));
 
@@ -185,9 +185,15 @@ void CChildView::OnPaint()
 
 				if (i == 0 && j > 0)
 				{
-					CString str;
-					str.Format(_T("%0.1f - %0.1f"), 9 + 0.5*j - 0.5, 9 + 0.5*j);
-
+					CString str, str2;
+					str.Format(_T("%0.0f"), floor(9 + 0.5*j - 0.5));
+					if (j % 2 == 0) {
+						str2.Format(_T(":30"));
+					}
+					else {
+						str2.Format(_T(":00"));
+					}
+					str = str + str2;
 					dc.DrawText(str, rect, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 				}
 
@@ -195,7 +201,7 @@ void CChildView::OnPaint()
 				{
 					
 					if(i-1==0)
-					dc.DrawText(_T("Mon"), 3, rect, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+					dc.DrawText(_T("MON"), 3, rect, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 					else if (i - 1 == 1)
 						dc.DrawText(_T("THU"), 3, rect, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 					else if (i - 1 == 2)
