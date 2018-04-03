@@ -186,7 +186,7 @@ void CChildView::OnPaint()
 				if (i == 0 && j > 0)
 				{
 					CString str;
-					str.Format(_T("%d - %d"), 9 + j - 1, 9 + j);
+					str.Format(_T("%0.1f - %0.1f"), 9 + 0.5*j - 0.5, 9 + 0.5*j);
 
 					dc.DrawText(str, rect, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
 				}
@@ -216,7 +216,7 @@ void CChildView::OnPaint()
 	if (_schedule)
 	{
 		CString fit;
-		fit.Format(_T("적합도: %f, Generation: %d"), _schedule->GetFitness(),
+		fit.Format(_T("적합도: %f, 세대 수: %d"), _schedule->GetFitness(),
 			Algorithm::GetInstance().GetCurrentGeneration());
 
 		dc.SelectObject(&tableHeadersFont);

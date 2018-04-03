@@ -21,10 +21,12 @@ class CChildView;
 class Schedule;
 class Algorithm;
 
-// Number of working hours per day
-#define DAY_HOURS	12
+// Number of working half_hours per day
+#define DAY_HOURS	24
 // Number of days in week
 #define DAYS_NUM	5
+// Number of Hard RequireMents
+#define Hard_RequireMents 5
 
 enum AlgorithmState
 {

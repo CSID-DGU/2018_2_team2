@@ -10,8 +10,8 @@
 #include "CourseClass.h"
 
 // Initializes class object
-CourseClass::CourseClass(Professor* professor, Course* course, const list<StudentsGroup*>& groups,
-	bool requiresLab, int duration) :
+CourseClass::CourseClass(Professor* professor, Course* course, 
+	const list<StudentsGroup*>& groups, bool requiresLab, int duration) :
 	_professor(professor),
 	_course(course),
 	_numberOfSeats(0),

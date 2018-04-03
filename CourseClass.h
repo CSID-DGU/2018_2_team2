@@ -70,6 +70,6 @@ public:
 	inline bool IsLabRequired() const { return _requiresLab; }
 
 	// Returns duration of class in hours
-	inline int GetDuration() const { return _duration; }
+	inline int GetDuration() const { return _duration*2; }
 
 };

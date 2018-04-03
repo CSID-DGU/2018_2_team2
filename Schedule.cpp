@@ -43,7 +43,7 @@ Schedule::Schedule(int numberOfCrossoverPoints, int mutationSize,
 	_slots.resize(DAYS_NUM * DAY_HOURS * Configuration::GetInstance().GetNumberOfRooms());
 
 	// reserve space for flags of class requirements
-	_criteria.resize(Configuration::GetInstance().GetNumberOfCourseClasses() * 5);
+	_criteria.resize(Configuration::GetInstance().GetNumberOfCourseClasses() * Hard_RequireMents);
 }
 
 // Copy constructor
@@ -67,7 +67,7 @@ Schedule::Schedule(const Schedule& c, bool setupOnly)
 		_slots.resize(DAYS_NUM * DAY_HOURS * Configuration::GetInstance().GetNumberOfRooms());
 
 		// reserve space for flags of class requirements
-		_criteria.resize(Configuration::GetInstance().GetNumberOfCourseClasses() * 5);
+		_criteria.resize(Configuration::GetInstance().GetNumberOfCourseClasses() * Hard_RequireMents);
 	}
 
 	// copy parameters
