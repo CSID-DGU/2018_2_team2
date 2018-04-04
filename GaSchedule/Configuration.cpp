@@ -50,6 +50,7 @@ void Configuration::ParseFile(char* fileName)
 
 	// open file
 	ifstream input(fileName);
+	_tsetlocale(LC_ALL, _T("kor"));
 
 	string line;
 	while (input.is_open() && !input.eof())
