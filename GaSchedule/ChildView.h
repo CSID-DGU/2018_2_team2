@@ -4,7 +4,7 @@ enum AlgorithmState;
 
 #pragma once
 
-class CChildView : public CWnd
+class CChildView : public CWnd//Cwnd는 CFrameWnd, CView, CDialog,CControlBar의 상위클래스
 {
 
 public:
